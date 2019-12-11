@@ -12,3 +12,5 @@ tictac.py -
     
 train.ipyn -
     Jupyter notebook used to train.
+
+ProjectWriteUp.pdf - Write up of methods and results.
