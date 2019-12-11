@@ -25,14 +25,14 @@ class Node:
 
     def __init__(self,val,pol,models,state,player,find_children,is_terminal,node_lst,parent = None):
         '''
-            val = value function. val(state,player) returns value on [-1,1]
+            val = value function. val(state,models[0]) returns value on [-1,1]
 
             pol = probability val increases because of an action. 
-                  pol(s1,s2) return value on [0,1]
+                  pol(models[1],s1,s2) return value on [0,1]
             
             state = state of game at the node 
             
-            player = minimizer of maximizer of the value function
+            player = minimizer or maximizer of the value function
             
             find_children game dependent function that returns all possible child states
             
