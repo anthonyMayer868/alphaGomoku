@@ -9,8 +9,19 @@ import monte_carlo as mc
 
 
 '''
-    Functions specific to the game which a generalised version of tic tac toe.
-    the size of the grid and the number of 
+    Functions specific to the game which is a generalised version of tic tac toe.
+    the size of the grid and the number needed in a row to win can be changed at
+    the top of the script with s and w. 
+    
+    Player Class, contains value function, policy and function, and win statistics
+                for the functions.
+    Generation Class, contains best player,challenging player and the data generated 
+                by their games. The play games method plays the games and returns the
+                player with the most wins.
+    Game class, Actally plays out the game between two players calling all of the game 
+                and tree search function. contains data just for that game. 
+                
+                
 
 '''
 
