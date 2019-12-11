@@ -12,6 +12,37 @@ GOAL: make a general purpose monte carlo tree search class.
         search. specifically tries to predict the probability 
         that an action will have child states with higher value then
         the current state. 
+        
+        Node Class:
+            The fundamental unit of the search tree.
+            Attributes:
+                  node.parent is the parent node. only root doesn't have a parent node.
+                  node.children are a list of child nodes.
+                  node.node_lst is a list of all nodes in the tree for easy extraction of data
+                  node.player = 'max' or 'min' depending on whether the node's game state is 
+                                 the maximizing or minimizing player's turn
+                 node.val is a the value function
+                 node.pol i the policy function
+                 node.state is the node's game state
+                 node.is_terminal is a function that tests if a state is terminal
+                 node.terminal = True or False depending on whether the node is terminal
+                 node.n is the number of times a node has been visited
+                 node.N is total number of descendent states evaluated
+                 node.dont_return is True if all child states have been totally explored
+                                   down to only terminal states
+                 node.find_chilren is a function that finds child states
+                 
+          Methods:
+                 node.add_children()
+                     adds all possibly child nodes to the search tree. Also propages the statistics
+                     of those child states up the search tree.
+                     
+       Functions:
+            roll_out() finds a leaf node guided by Q values calculated from the statistics of the nodes.
+                
+            tree_search(node,num_searches=1000) performs tree searches with specified number of rollouts
+                                                with the node pased in acting as the root node. 
+                
 
 '''
 
