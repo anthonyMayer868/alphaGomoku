@@ -1,4 +1,4 @@
-# tictactoe
+# AlphaGomoku
 Final Project for Machine Learning
 
 
